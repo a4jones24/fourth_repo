@@ -1,0 +1,36 @@
+let result = document.querySelector('.result');
+
+function insertNumber(num) {
+  result.value += num;
+}
+
+function clearResult() {
+  result.value = '';
+}
+
+function deleteResult() {
+  result.value = result.value.slice(0, -1);
+}
+
+function calculate(op) {
+  switch (op) {
+    case '/':
+      result.value += op;
+      break;
+    case '*':
+      result.value += op;
+      break;
+    case '-':
+      result.value += op;
+      break;
+    case '+':
+      result.value += op;
+      break;
+    default:
+      break;
+  }
+}
+
+function getResult() {
+  result.value = eval(result.value);
+}
